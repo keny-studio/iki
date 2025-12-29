@@ -256,6 +256,7 @@ XIF | Wang imaging file. Wang Image Viewer comes with Windows 95/2000
 XIF | Xerox Image file (same as TIFF)
 XIF | Image file eXtended by ScanSoft is similar to TIFF and is a Pagis application format
 XLS | Microsoft Excel Spreadsheet
+XLSX | modern Microsoft Excel spreadsheets, that is using xml
 XLT | Microsoft Excel Template
 XML | Extensible markup language
 XSL | XML style sheet
