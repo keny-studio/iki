@@ -14,6 +14,7 @@ ART | Clipart
 ASC | ASCII text file
 ASM | Assembler code
 ASP | Microsoft Active Server Page
+ASPX | Microsoft Active Server Page Extended
 AVI | Audio/Video Interleaved used for Windows based movies
 | | |
 | - B - | |
