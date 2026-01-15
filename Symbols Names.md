@@ -1,4 +1,4 @@
-## $${\color{red}Keyboard \ Symbols \ Names}$$
+## $${\color{red}Symbols \ Names}$$
 
 
 ### 🔢 Basic Keyboard Symbols
@@ -22,7 +22,7 @@
 * **-** – minus / hyphen
 * **=** – equals
 * **/** – slash / forward slash
-* **\** – backslash
+* **\\** – backslash
 * **<** – less than
 * **>** – greater than
 
@@ -46,6 +46,8 @@
 * **_** – underscore
 * **~** – tilde
 * **`** – grave accent / backtick
+* **–** - en dash
+* **—** - em dash
 
 ---
 
