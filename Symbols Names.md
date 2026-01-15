@@ -69,3 +69,9 @@
 * **Shift** – uppercase / alternative symbol
 * **Ctrl** – control (shortcuts)
 * **Alt / AltGr** – special characters
+
+---
+
+### ♾️ Other
+
+* **...** - ellipsis
