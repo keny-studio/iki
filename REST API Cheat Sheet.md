@@ -34,23 +34,23 @@ An API defines:
 
 ---
 
-###  ⚠️ POST to fetch data
+###  ⚠️ Using POST to fetch data
 
 You can use POST to fetch data - but it’s mainly justified when there’s a clear reason (complex input, sensitive data, or processing semantics).
 
 Reasons developers use POST for reads:
 
 1. Hiding sensitive parameters:
-Data in the body (POST) isn’t in URLs, so it doesn’t appear in logs or browser history (though HTTPS still encrypts both GET URLs and POST bodies in transit).
+- Data in the body (POST) isn’t in URLs, so it doesn’t appear in logs or browser history (though HTTPS still encrypts both GET URLs and POST bodies in transit).
 
 2. Complex or large payloads:
-GET URLs have length limits; when you need rich JSON queries (filters, sorts, etc.), POST is easier.
+- GET URLs have length limits; when you need rich JSON queries (filters, sorts, etc.), POST is easier.
 
 3. Non-idempotent “reads”:
-If the server does extra processing (e.g., analytics) when returning data, treating it as an action via POST can align better with its semantics.
+- If the server does extra processing (e.g., analytics) when returning data, treating it as an action via POST can align better with its semantics.
 
 4. Legacy or tooling constraints:
-Some older systems or tooling only support POST bodies, so APIs use POST for everything.
+- Some older systems or tooling only support POST bodies, so APIs use POST for everything.
 
 #### Trade-offs to consider:
 
