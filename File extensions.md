@@ -170,6 +170,7 @@ PCT | Macintosh drawing format
 PDF | Portable Document File by Adobe. Viewable in a web browser or with Adobe Acrobat
 PDF | Printer Description File. Provides printer support for certain applications
 PDR | Port driver for windows 95. It is actually a virtual device driver (vxd)
+PHAR | PHP Archive. Compressed, single-file packaging format used in PHP to bundle libraries or entire applications.
 PHP | Web page that contains a PHP script
 PHTML | Web page that contains a PHP script
 PIF | Program Information File
