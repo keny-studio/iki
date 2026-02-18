@@ -314,7 +314,177 @@ POST https://client.app/webhook
 
 ---
 
-## 9️⃣ Public vs Private vs Partner APIs
+
+
+
+## Push vs Pull API Architecture
+
+### Core Concept
+
+| Feature             | **Push API**                     | **Pull API**                         |
+| ------------------- | -------------------------------- | ------------------------------------ |
+| Who initiates?      | **Server pushes** data to client | **Client requests** data from server |
+| Trigger             | Event-driven                     | Client-driven                        |
+| Communication style | Webhooks, streaming              | REST polling, GraphQL queries        |
+| Summing up          | Real-time, scalable, complex     | Simple, controlled, predictable      |
+
+---
+
+## 📤 Push API (Event-Driven)
+
+**Definition:**
+Server sends data automatically when an event happens.
+
+### 🔧 Common Technologies
+
+* Webhooks
+* WebSockets
+* Server-Sent Events (SSE)
+* Message queues (Kafka, RabbitMQ)
+
+### ✅ How It Works
+
+1. Client registers callback URL or opens connection.
+2. Event happens.
+3. Server sends data immediately.
+
+### 📦 Example
+
+Stripe webhook:
+
+```http
+POST /webhook
+{
+  "event": "payment.succeeded",
+  "data": {...}
+}
+```
+
+### ✅ Pros
+
+* Real-time updates
+* No unnecessary polling
+* Lower latency
+* Efficient bandwidth usage
+
+### ❌ Cons
+
+* Harder to debug
+* Requires public endpoint
+* Security (signature validation required)
+* Retry handling complexity
+
+### 📌 Use Cases
+
+* Payments (e.g. Stripe webhooks)
+* Git events (e.g. GitHub webhooks)
+* Chat apps
+* Live dashboards
+* IoT
+
+---
+
+## 📥 Pull API (Request-Response)
+
+**Definition:**
+Client repeatedly asks server for data.
+
+### 🔧 Common Technologies
+
+* REST (`GET`)
+* GraphQL queries
+* Polling
+* Cron-based sync
+
+### ✅ How It Works
+
+1. Client sends request.
+2. Server responds.
+3. Client decides when to ask again.
+
+### 📦 Example
+
+```http
+GET /orders/123
+```
+
+Polling example:
+
+```js
+setInterval(fetchOrders, 5000);
+```
+
+### ✅ Pros
+
+* Simple architecture
+* Easy to test/debug
+* Full client control
+* No public endpoint required
+
+### ❌ Cons
+
+* Latency (depends on polling interval)
+* Wasted requests
+* Higher server load if frequent polling
+
+### 📌 Use Cases
+
+* Dashboard refresh
+* Admin panels
+* Analytics
+* Manual data sync
+
+---
+
+## ⚖️ Direct Comparison
+
+| Aspect               | Push             | Pull                           |
+| -------------------- | ---------------- | ------------------------------ |
+| Real-time            | ✅ Yes            | ❌ No (unless frequent polling) |
+| Complexity           | Higher           | Lower                          |
+| Server Load          | Efficient        | Can be high                    |
+| Client Control       | Lower            | Higher                         |
+| Firewall Friendly    | Sometimes tricky | Very easy                      |
+| Reliability Handling | Needs retries    | Simple retry via client        |
+
+---
+
+## 🚀 When to Choose What?
+
+### Choose **Push** if:
+
+* You need real-time updates
+* Events are unpredictable
+* You want efficiency at scale
+* You’re building SaaS integrations
+
+### Choose **Pull** if:
+
+* Simplicity matters
+* Data changes rarely
+* Client must control refresh
+* You build internal tools
+
+---
+
+## 🏗 Hybrid Approach (Common in Modern Systems)
+
+Most modern systems combine both:
+
+* Pull for initial state
+* Push for updates
+
+Example:
+
+* Client fetches initial data via REST
+* Then subscribes via WebSocket for live updates
+
+
+
+---
+
+
+##  Public vs Private vs Partner APIs
 
 | Type    | Description                  |
 | ------- | ---------------------------- |
