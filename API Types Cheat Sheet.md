@@ -9,6 +9,8 @@
 | GraphQL    | Client defines requested data          |
 | RPC        | Remote procedure calls                 |
 | WebSockets | Real-time, bidirectional communication |
+| WebHooks   | callbacks when events happen in another system |
+| WebRTC     | Peer-to-peer, real-time audio, video, and data | 
 
 
 
@@ -315,6 +317,111 @@ POST https://client.app/webhook
 ---
 
 
+
+
+
+## 🎥 WebRTC API
+
+### What Is WebRTC?
+
+**WebRTC (Web Real-Time Communication)** enables real-time audio, video, and data directly between browsers or devices.
+
+Peer-to-peer by default.
+
+---
+
+### Core Components
+
+| Component           | Purpose                   |
+| ------------------- | ------------------------- |
+| `RTCPeerConnection` | Manages connection        |
+| `RTCDataChannel`    | Sends arbitrary data      |
+| `getUserMedia()`    | Access camera/mic         |
+| ICE                 | NAT traversal             |
+| STUN/TURN           | Relay & discovery servers |
+
+---
+
+### Architecture
+
+```
+Client A ←→ Signaling Server ←→ Client B
+          ↓
+      P2P Connection
+```
+
+WebRTC requires **signaling server** (WebSocket / HTTP) to exchange:
+
+* SDP offers/answers
+* ICE candidates
+
+---
+
+### Basic Flow
+
+1. Create peer connection
+2. Get media stream
+3. Create offer
+4. Send offer via signaling
+5. Receive answer
+6. Exchange ICE candidates
+7. Connection established
+
+---
+
+### Minimal Example (Browser)
+
+```js
+const pc = new RTCPeerConnection();
+
+const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+stream.getTracks().forEach(track => pc.addTrack(track, stream));
+
+const offer = await pc.createOffer();
+await pc.setLocalDescription(offer);
+
+// send offer to other peer via signaling server
+```
+
+---
+
+### STUN vs TURN
+
+| STUN            | TURN            |
+| --------------- | --------------- |
+| Finds public IP | Relays traffic  |
+| Lightweight     | Bandwidth heavy |
+| Used first      | Fallback option |
+
+---
+
+### Use Cases
+
+* Video calls (e.g., Zoom)
+* Browser P2P apps
+* Multiplayer games
+* Screen sharing
+* Live streaming
+
+---
+
+### Pros
+
+✅ Low latency
+✅ P2P by default
+✅ No plugins required
+✅ Encrypted (DTLS/SRTP)
+
+---
+
+### Cons
+
+❌ Complex setup
+❌ NAT/firewall issues
+❌ Requires signaling server
+❌ TURN servers can be expensive
+
+---
 
 
 ## Push vs Pull API Architecture
