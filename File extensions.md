@@ -136,6 +136,7 @@ MAQ | Microsoft Access Query
 MAR | Microsoft Access Report
 MDB | Microsoft Access DataBase File
 MDL | Rose model file. Opens with Visual Modeler or Rational Rose
+MD5 | Digital "fingerprint" or checksum, ensuring that data has not been corrupted or altered during transmission.
 MFM | MFWorks map file standard by Keigan Systems
 MHT | Microsoft single file web archive
 MID | MIDI music file
