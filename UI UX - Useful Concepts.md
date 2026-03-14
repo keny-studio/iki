@@ -31,3 +31,5 @@ Only helpful wisdom for practical use in design.
 
 - High-friction/-commitment CTA - phrases or design elements that require a high commitment, investment, or effort from users, such as "Buy Now" "Submit" or "Sign Up". These CTAs create psychological or physical obstacles—often perceived as chores or financial risk—that can slow down or stop conversions.
 
+- Paradox of Choice - psychological concept stating that an abundance of options leads to cognitive overload, resulting in decision paralysis, anxiety, and lower satisfaction with the final choice. While more choices are traditionally seen as greater freedom, too many alternatives make deciding harder and increase regret.
+
