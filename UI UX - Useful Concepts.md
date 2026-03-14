@@ -33,3 +33,4 @@ Only helpful wisdom for practical use in design.
 
 - Paradox of Choice - psychological concept stating that an abundance of options leads to cognitive overload, resulting in decision paralysis, anxiety, and lower satisfaction with the final choice. While more choices are traditionally seen as greater freedom, too many alternatives make deciding harder and increase regret.
 
+- IA - information architecture - structural design, organization, and labeling of content in digital products (websites, apps) to support usability, navigation, and findability. It acts as a blueprint, structuring, organizing, and labeling content to ensure users can easily find information, ultimately improving user experience (UX) and navigation efficiency.
