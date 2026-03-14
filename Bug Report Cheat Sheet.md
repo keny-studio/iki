@@ -137,3 +137,59 @@ A bug report is complete if:
 * the issue can be reproduced without clarification
 * expected vs actual behavior is unambiguous
 * enough technical context is provided to debug
+
+
+### 🐞 Universal Bug Report Template (Copy-Paste)
+
+```md
+## Title
+[Clear, technical summary of the issue]
+
+## Description
+[Brief explanation of what is broken and its impact]
+
+## Steps to Reproduce (STR)
+1.
+2.
+3.
+
+## Expected Result
+[What should happen]
+
+## Actual Result
+[What actually happens]
+
+## Environment
+- OS:
+- Browser / Device:
+- App Version:
+- Runtime (Node/PHP/JVM/etc.):
+- Database / API:
+
+## Error Details / Logs
+[Error messages, stack traces, HTTP status codes]
+
+## Reproducibility
+[Always / Intermittent / Specific conditions]
+
+## Severity
+[Blocker / Critical / Major / Minor / Trivial]
+
+## Priority
+[P0 / P1 / P2 / P3 / P4]
+
+## Affected Component
+[Module / Feature / Service]
+
+## Regression
+[Yes / No / Unknown | Version / Commit]
+
+## Workaround
+[Temporary solution if available]
+
+## Attachments
+[Screenshots / Videos / HAR / Dumps]
+
+## Related Issues / References
+[Linked tickets, PRs, commits, docs]
+```
