@@ -25,7 +25,7 @@ Only helpful wisdom for practical use in design.
 
 - Stimulus-response (S-R) compatibility - degree to which the relationship between a stimulus (e.g., a visual cue) and its required response (e.g., a physical action) aligns with human expectations or "natural" mappings. High compatibility, such as turning a knob clockwise to increase volume, results in faster, more accurate, and intuitive performance.
 
-- friction - In web design is an obstacle—such as slow loading speeds, confusing navigation, or complex checkout processes—that frustrates users and hinders them from completing actions, leading to lower conversions, higher bounce rates, and reduced brand loyalty. It includes technical issues like broken links, poor mobile design, or excessive, unnecessary form fields.
+- friction - In web design is an obstacle - such as slow loading speeds, confusing navigation, or complex checkout processes—that frustrates users and hinders them from completing actions, leading to lower conversions, higher bounce rates, and reduced brand loyalty. It includes technical issues like broken links, poor mobile design, or excessive, unnecessary form fields.
 
 - Low-friction/-commitment CTA - low-commitment, conversational prompt designed to initiate engagement without overwhelming the prospect, often yielding higher response rates in cold emails and landing pages. Examples include "Worth exploring?""Open to a quick back and forth?", or "Mind if I send a 60-second video?".
 
@@ -34,3 +34,5 @@ Only helpful wisdom for practical use in design.
 - Paradox of Choice - psychological concept stating that an abundance of options leads to cognitive overload, resulting in decision paralysis, anxiety, and lower satisfaction with the final choice. While more choices are traditionally seen as greater freedom, too many alternatives make deciding harder and increase regret.
 
 - IA - information architecture - structural design, organization, and labeling of content in digital products (websites, apps) to support usability, navigation, and findability. It acts as a blueprint, structuring, organizing, and labeling content to ensure users can easily find information, ultimately improving user experience (UX) and navigation efficiency.
+
+- design ethnography - qualitative, user-centered research method that combines anthropology with design, involving direct observation, interviews, and immersion in a user's environment. It focuses on understanding daily practices, motivations, and pain points to inform, inspire, and validate the development of new products, services, and systems.
