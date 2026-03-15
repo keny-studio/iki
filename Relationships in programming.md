@@ -1,4 +1,4 @@
-## $${\color{red}Relationships}$$ - how things are linked
+## $${\color{red}Relationships \ in \ programming}$$ - how things are linked
 
 
 > **Relationship** - defined connection between entities (such as objects, classes, modules, or data records) that determines how they reference, use, or affect each other.
