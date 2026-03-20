@@ -6,6 +6,8 @@
 There are two types of hooks: Actions and Filters. <br>
 To use either, you need to write a custom function known as a Callback, and then register it with a WordPress hook for a specific action or filter.
 
+![hook types](img/wp_hook_types.png)
+
 ### **Actions** 
 - allow to add data or change how WordPress operates. <br>
 
@@ -13,12 +15,16 @@ Actions will run at a specific point in the execution of WordPress Core, plugins
 Callback functions for Actions can perform some kind of a task, like echoing output to the user or inserting something into the database. <br>
 Callback functions for an Action do not return anything back to the calling Action hook. <br>
 
+![hook types](img/wp_hook_action.png)
+
 ### **Filters** 
 - give the ability to change data during the execution of WordPress Core, plugins, and themes. <br>
   
 Callback functions for Filters will accept a variable, modify it, and return it. <br>
 They are meant to work in an isolated manner, and should never have side effects such as affecting global variables and output.<br>
 Filters expect to have something returned back to them.
+
+![hook types](img/wp_hook_filter.png)
 
 WordPress provides many hooks that you can use, but you can also create your own so that other developers can extend and modify your plugin or theme.
 
