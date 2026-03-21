@@ -12,7 +12,7 @@
 | WebHooks   | callbacks when events happen in another system |
 | WebRTC     | Peer-to-peer, real-time audio, video, and data | 
 
-
+![API types](img/API_types.png)
 
 ## 1️⃣ REST (Representational State Transfer)
 
